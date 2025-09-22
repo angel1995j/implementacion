@@ -1,0 +1,65 @@
+<!-- formulario.html -->
+<form action="procesar.php" method="post">
+  <!-- Texto -->
+  <label>Nombre:</label>
+  <input type="text" name="nombre"><br><br>
+
+  <!-- Contraseña -->
+  <label>Contraseña:</label>
+  <input type="password" name="contrasena"><br><br>
+
+  <!-- Número -->
+  <label>Edad:</label>
+  <input type="number" name="edad" min="1" max="100"><br><br>
+
+  <!-- Email -->
+  <label>Email:</label>
+  <input type="email" name="email"><br><br>
+
+  <!-- Teléfono -->
+  <label>Teléfono:</label>
+  <input type="tel" name="telefono"><br><br>
+
+  <!-- Fecha -->
+  <label>Fecha de nacimiento:</label>
+  <input type="date" name="fecha_nacimiento"><br><br>
+
+  <!-- Hora -->
+  <label>Hora de cita:</label>
+  <input type="time" name="hora"><br><br>
+
+  <!-- Color -->
+  <label>Color favorito:</label>
+  <input type="color" name="color"><br><br>
+
+  <!-- Archivo -->
+  <label>Subir archivo:</label>
+  <input type="file" name="archivo"><br><br>
+
+  <!-- Radio -->
+  <label>Género:</label>
+  <input type="radio" name="genero" value="M"> Masculino
+  <input type="radio" name="genero" value="F"> Femenino <br><br>
+
+  <!-- Checkbox -->
+  <label>Intereses:</label><br>
+  <input type="checkbox" name="intereses[]" value="Deporte"> Deporte<br>
+  <input type="checkbox" name="intereses[]" value="Música"> Música<br>
+  <input type="checkbox" name="intereses[]" value="Tecnología"> Tecnología<br><br>
+
+  <!-- Select -->
+  <label>País:</label>
+  <select name="pais">
+    <option value="mx">México</option>
+    <option value="us">Estados Unidos</option>
+    <option value="es">España</option>
+  </select><br><br>
+
+  <!-- Textarea -->
+  <label>Comentarios:</label><br>
+  <textarea name="comentarios" rows="4" cols="40"></textarea><br><br>
+
+  <!-- Botones -->
+  <input type="submit" value="Enviar">
+  <input type="reset" value="Limpiar">
+</form>
