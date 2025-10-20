@@ -1,0 +1,58 @@
+-- 🧱 CREAR BASE DE DATOS Y TABLA
+CREATE DATABASE tienda;
+
+USE tienda;
+
+CREATE TABLE productos (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    precio DECIMAL(10,2),
+    cantidad INT,
+    categoria VARCHAR(50)
+);
+
+-- 🛒 INSERTAR DATOS
+INSERT INTO productos (nombre, precio, cantidad, categoria)
+VALUES ('Camiseta', 199.90, 50, 'Ropa');
+
+INSERT INTO productos (nombre, precio, cantidad, categoria)
+VALUES 
+('Pantalón', 350.00, 30, 'Ropa'),
+('Tenis', 899.99, 20, 'Calzado'),
+('Mochila', 499.50, 15, 'Accesorios');
+
+-- 🔍 CONSULTAR DATOS
+SELECT * FROM productos;
+
+SELECT nombre, precio FROM productos;
+
+SELECT * FROM productos WHERE precio > 300;
+
+SELECT * FROM productos ORDER BY precio DESC;
+
+-- ✏️ ACTUALIZAR DATOS
+UPDATE productos
+SET precio = 219.90
+WHERE nombre = 'Camiseta';
+
+UPDATE productos
+SET cantidad = cantidad + 10
+WHERE categoria = 'Ropa';
+
+-- ❌ ELIMINAR DATOS
+DELETE FROM productos
+WHERE nombre = 'Mochila';
+
+DELETE FROM productos
+WHERE categoria = 'Accesorios';
+
+-- 🧹 MODIFICAR TABLA O BASE DE DATOS
+ALTER TABLE productos ADD COLUMN marca VARCHAR(50);
+
+ALTER TABLE productos MODIFY precio DECIMAL(12,2);
+
+TRUNCATE TABLE productos;
+
+DROP TABLE productos;
+
+DROP DATABASE tienda;
