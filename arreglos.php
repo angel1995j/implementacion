@@ -1,40 +1,24 @@
-// ==========================================
-// EJEMPLOS PRÁCTICOS COMBINADOS
-// ==========================================
+<?php
+// Array indexado (lista simple)
+$frutas = ["Manzana", "Banana", "Naranja", "Fresa"];
 
-echo "=== EJEMPLO PRÁCTICO: SISTEMA DE PRODUCTOS ===\n";
+echo "<h3>Mi lista de frutas:</h3>";
+echo "<ul>";
+echo "<li>" . $frutas[0] . "</li>"; // Accedemos por su posición (índice)
+echo "<li>" . $frutas[1] . "</li>";
+echo "<li>" . $frutas[2] . "</li>";
+echo "</ul>";
 
-// Array de productos
-$productos = [
-    [
-        "id" => 1,
-        "nombre" => "Laptop",
-        "precio" => 899.99,
-        "stock" => 15,
-        "activo" => true
-    ],
-    [
-        "id" => 2,
-        "nombre" => "Mouse",
-        "precio" => 25.50,
-        "stock" => 0,
-        "activo" => false
-    ],
-    [
-        "id" => 3,
-        "nombre" => "Teclado",
-        "precio" => 45.75,
-        "stock" => 30,
-        "activo" => true
-    ]
+// Array asociativo (información con etiquetas)
+$alumno = [
+    "nombre" => "Ana Pérez",
+    "edad" => 15,
+    "curso" => "PHP Básico",
+    "ciudad" => "Madrid"
 ];
 
-// Mostrar información de productos
-foreach ($productos as $producto) {
-    echo "Producto ID: " . $producto["id"] . "\n";
-    echo "  Nombre: " . $producto["nombre"] . "\n";
-    echo "  Precio: $" . $producto["precio"] . "\n";
-    echo "  Stock: " . $producto["stock"] . "\n";
-    echo "  Activo: " . ($producto["activo"] ? "Sí" : "No") . "\n";
-    echo "  --------------------\n";
-}
+echo "<h3>Datos del Alumno:</h3>";
+echo "<p>Nombre: " . $alumno["nombre"] . "</p>";
+echo "<p>Edad: " . $alumno["edad"] . " años</p>";
+echo "<p>Curso: " . $alumno["curso"] . "</p>";
+?>
